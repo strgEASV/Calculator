@@ -84,11 +84,18 @@ public class HelloController {
 
         double result = 0;
         switch (operator) {
-            case "+": result = firstNumber + secondNumber; break;
-            case "-": result = firstNumber - secondNumber; break;
-            case "*": result = firstNumber * secondNumber; break;
+            case "+":
+                result = firstNumber + secondNumber;
+                break;
+            case "-":
+                result = firstNumber - secondNumber;
+                break;
+            case "*":
+                result = firstNumber * secondNumber;
+                break;
             case "/":
-                if (secondNumber != 0) result = firstNumber / secondNumber;
+                if (secondNumber != 0)
+                    result = firstNumber / secondNumber;
                 else {
                     txtUserInput.setText("Error");
                     return;
