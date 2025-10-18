@@ -10,28 +10,31 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="650.0" prefWidth="450.0" xmlns="http://javafx.com/javafx/24.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="dk.easv.calculator.HelloController">
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="400.0" style="-fx-background-color: #1e1e1e; -fx-padding: 15;" xmlns="http://javafx.com/javafx/24.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="dk.easv.calculator.HelloController">
    <children>
-      <VBox prefHeight="194.0" prefWidth="600.0">
+      <VBox prefHeight="200.0" prefWidth="370.0" spacing="8" style="-fx-background-color: #2d2d2d; -fx-background-radius: 15; -fx-padding: 15;">
          <children>
-            <Label fx:id="lblLastClick" text="Label" textAlignment="RIGHT">
+            <Label fx:id="lblLastClick" text="Připraveno" textAlignment="RIGHT" textFill="#888888" VBox.vgrow="NEVER">
                <font>
-                  <Font size="18.0" />
+                  <Font name="System Bold" size="14.0" />
                </font>
             </Label>
-            <TextArea fx:id="txtUserInput" prefHeight="187.0" prefWidth="600.0">
+            <TextArea fx:id="txtUserInput" editable="false" prefHeight="100.0" prefWidth="340.0" style="-fx-control-inner-background: #2d2d2d; -fx-text-fill: #ffffff; -fx-font-size: 42px; -fx-font-weight: bold; -fx-background-color: transparent; -fx-border-color: transparent; -fx-focus-color: transparent; -fx-faint-focus-color: transparent; -fx-text-alignment: right;" wrapText="true" VBox.vgrow="ALWAYS">
                <font>
-                  <Font size="36.0" />
+                  <Font size="42.0" />
                </font>
             </TextArea>
-            <Label fx:id="lblCalculation" text="Label">
+            <Label fx:id="lblCalculation" text=" " textFill="#64b5f6" VBox.vgrow="NEVER">
                <font>
-                  <Font size="18.0" />
+                  <Font name="System Bold" size="16.0" />
                </font>
             </Label>
          </children>
+         <VBox.margin>
+            <Insets bottom="15.0" />
+         </VBox.margin>
       </VBox>
-      <GridPane prefHeight="415.0" prefWidth="606.0">
+      <GridPane hgap="10.0" prefHeight="350.0" prefWidth="370.0" vgap="10.0">
         <columnConstraints>
           <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
           <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
@@ -45,95 +48,117 @@
           <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
         </rowConstraints>
          <children>
-            <Button fx:id="lblC" mnemonicParsing="false" prefHeight="50.0" prefWidth="65.0" text="C">
-               <GridPane.margin>
-                  <Insets left="20.0" />
-               </GridPane.margin></Button>
-            <Button fx:id="lblPlusMinus" layoutX="10.0" layoutY="51.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="65.0" text="Button" GridPane.columnIndex="1">
-               <GridPane.margin>
-                  <Insets left="20.0" />
-               </GridPane.margin></Button>
-            <Button fx:id="lblPercentage" layoutX="160.0" layoutY="51.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="65.0" text="\%" GridPane.columnIndex="2">
-               <GridPane.margin>
-                  <Insets left="20.0" />
-               </GridPane.margin></Button>
-            <Button fx:id="lblDivide" layoutX="310.0" layoutY="51.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="65.0" text="/" GridPane.columnIndex="3">
-               <GridPane.margin>
-                  <Insets left="20.0" />
-               </GridPane.margin></Button>
-            <Button fx:id="lblSeven" layoutX="460.0" layoutY="51.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="65.0" text="7" GridPane.rowIndex="1">
-               <GridPane.margin>
-                  <Insets left="20.0" />
-               </GridPane.margin></Button>
-            <Button fx:id="lblEight" layoutX="10.0" layoutY="158.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="65.0" text="8" GridPane.columnIndex="1" GridPane.rowIndex="1">
-               <GridPane.margin>
-                  <Insets left="20.0" />
-               </GridPane.margin></Button>
-            <Button fx:id="lblNine" layoutX="160.0" layoutY="158.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="65.0" text="9" GridPane.columnIndex="2" GridPane.rowIndex="1">
-               <GridPane.margin>
-                  <Insets left="20.0" />
-               </GridPane.margin></Button>
-            <Button fx:id="lblMultiply" layoutX="310.0" layoutY="158.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="65.0" text="X" GridPane.columnIndex="3" GridPane.rowIndex="1">
-               <GridPane.margin>
-                  <Insets left="20.0" />
-               </GridPane.margin></Button>
-            <Button fx:id="lblFour" layoutX="460.0" layoutY="158.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="65.0" text="4" GridPane.rowIndex="2">
-               <GridPane.margin>
-                  <Insets left="20.0" />
-               </GridPane.margin></Button>
-            <Button fx:id="lblSix" layoutX="160.0" layoutY="265.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="65.0" text="6" GridPane.columnIndex="2" GridPane.rowIndex="2">
-               <GridPane.margin>
-                  <Insets left="20.0" />
-               </GridPane.margin></Button>
-            <Button fx:id="lblMinus" layoutX="310.0" layoutY="265.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="65.0" text="-" GridPane.columnIndex="3" GridPane.rowIndex="2">
-               <GridPane.margin>
-                  <Insets left="20.0" />
-               </GridPane.margin></Button>
-            <Button fx:id="lblOne" layoutX="10.0" layoutY="265.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="65.0" text="1" GridPane.rowIndex="3">
-               <GridPane.margin>
-                  <Insets left="20.0" />
-               </GridPane.margin></Button>
-            <Button fx:id="lblPlus" layoutX="160.0" layoutY="265.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="65.0" text="+" GridPane.columnIndex="3" GridPane.rowIndex="3">
-               <GridPane.margin>
-                  <Insets left="20.0" />
-               </GridPane.margin></Button>
-            <Button fx:id="lblThree" layoutX="310.0" layoutY="265.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="65.0" text="3" GridPane.columnIndex="2" GridPane.rowIndex="3">
-               <GridPane.margin>
-                  <Insets left="20.0" />
-               </GridPane.margin></Button>
-            <Button fx:id="lblTwo" layoutX="460.0" layoutY="265.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="65.0" text="2" GridPane.columnIndex="1" GridPane.rowIndex="3">
-               <GridPane.margin>
-                  <Insets left="20.0" />
-               </GridPane.margin></Button>
-            <Button fx:id="lblFive" mnemonicParsing="false" prefHeight="50.0" prefWidth="65.0" text="5" GridPane.columnIndex="1" GridPane.rowIndex="2">
-               <GridPane.margin>
-                  <Insets left="20.0" />
-               </GridPane.margin></Button>
+            <Button fx:id="lblC" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" style="-fx-background-color: #ff5252; -fx-background-radius: 15; -fx-text-fill: white; -fx-font-size: 20px; -fx-font-weight: bold; -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.3), 5, 0, 0, 2);" text="C">
+               <font>
+                  <Font name="System Bold" size="20.0" />
+               </font>
+            </Button>
+            <Button fx:id="lblPlusMinus" layoutX="10.0" layoutY="51.0" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" style="-fx-background-color: #424242; -fx-background-radius: 15; -fx-text-fill: white; -fx-font-size: 20px; -fx-font-weight: bold; -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.3), 5, 0, 0, 2);" text="±" GridPane.columnIndex="1">
+               <font>
+                  <Font name="System Bold" size="20.0" />
+               </font>
+            </Button>
+            <Button fx:id="lblPercentage" layoutX="104.0" layoutY="10.0" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" style="-fx-background-color: #424242; -fx-background-radius: 15; -fx-text-fill: white; -fx-font-size: 20px; -fx-font-weight: bold; -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.3), 5, 0, 0, 2);" text="\%" GridPane.columnIndex="2">
+               <font>
+                  <Font name="System Bold" size="20.0" />
+               </font>
+            </Button>
+            <Button fx:id="lblDivide" layoutX="198.0" layoutY="10.0" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" style="-fx-background-color: #ff9800; -fx-background-radius: 15; -fx-text-fill: white; -fx-font-size: 24px; -fx-font-weight: bold; -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.3), 5, 0, 0, 2);" text="÷" GridPane.columnIndex="3">
+               <font>
+                  <Font name="System Bold" size="24.0" />
+               </font>
+            </Button>
+            <Button fx:id="lblSeven" layoutX="292.0" layoutY="10.0" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" style="-fx-background-color: #525252; -fx-background-radius: 15; -fx-text-fill: white; -fx-font-size: 22px; -fx-font-weight: bold; -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.3), 5, 0, 0, 2);" text="7" GridPane.rowIndex="1">
+               <font>
+                  <Font name="System Bold" size="22.0" />
+               </font>
+            </Button>
+            <Button fx:id="lblEight" layoutX="10.0" layoutY="98.0" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" style="-fx-background-color: #525252; -fx-background-radius: 15; -fx-text-fill: white; -fx-font-size: 22px; -fx-font-weight: bold; -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.3), 5, 0, 0, 2);" text="8" GridPane.columnIndex="1" GridPane.rowIndex="1">
+               <font>
+                  <Font name="System Bold" size="22.0" />
+               </font>
+            </Button>
+            <Button fx:id="lblNine" layoutX="104.0" layoutY="98.0" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" style="-fx-background-color: #525252; -fx-background-radius: 15; -fx-text-fill: white; -fx-font-size: 22px; -fx-font-weight: bold; -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.3), 5, 0, 0, 2);" text="9" GridPane.columnIndex="2" GridPane.rowIndex="1">
+               <font>
+                  <Font name="System Bold" size="22.0" />
+               </font>
+            </Button>
+            <Button fx:id="lblMultiply" layoutX="198.0" layoutY="98.0" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" style="-fx-background-color: #ff9800; -fx-background-radius: 15; -fx-text-fill: white; -fx-font-size: 24px; -fx-font-weight: bold; -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.3), 5, 0, 0, 2);" text="×" GridPane.columnIndex="3" GridPane.rowIndex="1">
+               <font>
+                  <Font name="System Bold" size="24.0" />
+               </font>
+            </Button>
+            <Button fx:id="lblFour" layoutX="292.0" layoutY="98.0" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" style="-fx-background-color: #525252; -fx-background-radius: 15; -fx-text-fill: white; -fx-font-size: 22px; -fx-font-weight: bold; -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.3), 5, 0, 0, 2);" text="4" GridPane.rowIndex="2">
+               <font>
+                  <Font name="System Bold" size="22.0" />
+               </font>
+            </Button>
+            <Button fx:id="lblSix" layoutX="104.0" layoutY="186.0" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" style="-fx-background-color: #525252; -fx-background-radius: 15; -fx-text-fill: white; -fx-font-size: 22px; -fx-font-weight: bold; -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.3), 5, 0, 0, 2);" text="6" GridPane.columnIndex="2" GridPane.rowIndex="2">
+               <font>
+                  <Font name="System Bold" size="22.0" />
+               </font>
+            </Button>
+            <Button fx:id="lblMinus" layoutX="198.0" layoutY="186.0" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" style="-fx-background-color: #ff9800; -fx-background-radius: 15; -fx-text-fill: white; -fx-font-size: 28px; -fx-font-weight: bold; -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.3), 5, 0, 0, 2);" text="−" GridPane.columnIndex="3" GridPane.rowIndex="2">
+               <font>
+                  <Font name="System Bold" size="28.0" />
+               </font>
+            </Button>
+            <Button fx:id="lblOne" layoutX="10.0" layoutY="186.0" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" style="-fx-background-color: #525252; -fx-background-radius: 15; -fx-text-fill: white; -fx-font-size: 22px; -fx-font-weight: bold; -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.3), 5, 0, 0, 2);" text="1" GridPane.rowIndex="3">
+               <font>
+                  <Font name="System Bold" size="22.0" />
+               </font>
+            </Button>
+            <Button fx:id="lblPlus" layoutX="198.0" layoutY="186.0" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" style="-fx-background-color: #ff9800; -fx-background-radius: 15; -fx-text-fill: white; -fx-font-size: 28px; -fx-font-weight: bold; -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.3), 5, 0, 0, 2);" text="+" GridPane.columnIndex="3" GridPane.rowIndex="3">
+               <font>
+                  <Font name="System Bold" size="28.0" />
+               </font>
+            </Button>
+            <Button fx:id="lblThree" layoutX="198.0" layoutY="274.0" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" style="-fx-background-color: #525252; -fx-background-radius: 15; -fx-text-fill: white; -fx-font-size: 22px; -fx-font-weight: bold; -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.3), 5, 0, 0, 2);" text="3" GridPane.columnIndex="2" GridPane.rowIndex="3">
+               <font>
+                  <Font name="System Bold" size="22.0" />
+               </font>
+            </Button>
+            <Button fx:id="lblTwo" layoutX="292.0" layoutY="274.0" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" style="-fx-background-color: #525252; -fx-background-radius: 15; -fx-text-fill: white; -fx-font-size: 22px; -fx-font-weight: bold; -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.3), 5, 0, 0, 2);" text="2" GridPane.columnIndex="1" GridPane.rowIndex="3">
+               <font>
+                  <Font name="System Bold" size="22.0" />
+               </font>
+            </Button>
+            <Button fx:id="lblFive" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" style="-fx-background-color: #525252; -fx-background-radius: 15; -fx-text-fill: white; -fx-font-size: 22px; -fx-font-weight: bold; -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.3), 5, 0, 0, 2);" text="5" GridPane.columnIndex="1" GridPane.rowIndex="2">
+               <font>
+                  <Font name="System Bold" size="22.0" />
+               </font>
+            </Button>
          </children>
       </GridPane>
-      <GridPane prefHeight="90.0" prefWidth="604.0">
+      <GridPane hgap="10.0" prefHeight="80.0" prefWidth="370.0" vgap="10.0">
         <columnConstraints>
-          <ColumnConstraints hgrow="SOMETIMES" maxWidth="120.81964111328125" minWidth="10.0" prefWidth="118.37966918945312" />
-            <ColumnConstraints hgrow="SOMETIMES" maxWidth="193.90005493164062" minWidth="10.0" prefWidth="111.63929748535156" />
-          <ColumnConstraints hgrow="SOMETIMES" maxWidth="314.67889404296875" minWidth="10.0" prefWidth="225.36070251464844" />
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="120.81964111328125" minWidth="10.0" prefWidth="85.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="193.90005493164062" minWidth="10.0" prefWidth="85.0" />
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="314.67889404296875" minWidth="10.0" prefWidth="200.0" />
         </columnConstraints>
         <rowConstraints>
           <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
         </rowConstraints>
          <children>
-            <Button fx:id="lblComma" mnemonicParsing="false" prefHeight="50.0" prefWidth="65.0" text="," GridPane.columnIndex="1">
-               <GridPane.margin>
-                  <Insets left="20.0" />
-               </GridPane.margin></Button>
-            <Button fx:id="lblZero" mnemonicParsing="false" prefHeight="50.0" prefWidth="65.0" text="0">
-               <GridPane.margin>
-                  <Insets left="20.0" />
-               </GridPane.margin></Button>
-            <Button fx:id="lblEqual" mnemonicParsing="false" prefHeight="50.0" prefWidth="179.0" text="=" GridPane.columnIndex="2">
-               <GridPane.margin>
-                  <Insets left="20.0" />
-               </GridPane.margin></Button>
+            <Button fx:id="lblZero" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" style="-fx-background-color: #525252; -fx-background-radius: 15; -fx-text-fill: white; -fx-font-size: 22px; -fx-font-weight: bold; -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.3), 5, 0, 0, 2);" text="0">
+               <font>
+                  <Font name="System Bold" size="22.0" />
+               </font>
+            </Button>
+            <Button fx:id="lblComma" layoutX="10.0" layoutY="13.0" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" style="-fx-background-color: #525252; -fx-background-radius: 15; -fx-text-fill: white; -fx-font-size: 22px; -fx-font-weight: bold; -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.3), 5, 0, 0, 2);" text="." GridPane.columnIndex="1">
+               <font>
+                  <Font name="System Bold" size="22.0" />
+               </font>
+            </Button>
+            <Button fx:id="lblEqual" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" style="-fx-background-color: #4caf50; -fx-background-radius: 15; -fx-text-fill: white; -fx-font-size: 28px; -fx-font-weight: bold; -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.3), 5, 0, 0, 2);" text="=" GridPane.columnIndex="2">
+               <font>
+                  <Font name="System Bold" size="28.0" />
+               </font>
+            </Button>
          </children>
+         <VBox.margin>
+            <Insets top="10.0" />
+         </VBox.margin>
       </GridPane>
    </children>
 </VBox>

@@ -52,7 +52,7 @@ public class HelloController {
                 startNewNumber = false;
             }
             txtUserInput.appendText(btn.getText());
-            lblLastClick.setText("Klik: " + btn.getText());
+            lblLastClick.setText(btn.getText());
         });
     }
 
@@ -65,7 +65,7 @@ public class HelloController {
         operator = op;
         txtUserInput.appendText(" " + op + " ");
         startNewNumber = false;
-        lblLastClick.setText("Operátor: " + op);
+        lblLastClick.setText(op);
     }
 
     private void calculate() {
@@ -111,7 +111,7 @@ public class HelloController {
     private void clear() {
         txtUserInput.clear();
         lblCalculation.setText("");
-        lblLastClick.setText("Cleared");
+        lblLastClick.setText("Vymazáno");
         firstNumber = 0;
         operator = "";
         startNewNumber = true;
